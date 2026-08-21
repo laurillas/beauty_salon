@@ -1,3 +1,5 @@
+'use client';
+
 import {
   DialogClose,
   DialogContent,
@@ -20,7 +22,6 @@ export default function AppointmentForm({slot, appointmentDate}: {
 }) {
   const numeroWhatsApp = "5354316743";
   const [name, setName] = useState("")
-
   const [phone, setPhone] = useState("")
 
   function handleClick() {

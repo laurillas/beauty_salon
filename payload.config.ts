@@ -8,6 +8,7 @@ import sharp from "sharp";
 import {Users} from "./collections/Users";
 import {Media} from "./collections/Media";
 import {Slots} from "@/collections/Slots";
+import {Services} from "@/collections/Services";
 import {AppointmentDates} from "@/collections/AppointmentDates";
 import {Appointments} from "@/collections/Appointments";
 
@@ -21,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Slots, AppointmentDates, Appointments],
+  collections: [Users, Media, Slots, AppointmentDates, Appointments, Services],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

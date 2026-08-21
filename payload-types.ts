@@ -72,6 +72,7 @@ export interface Config {
     slots: Slot;
     'appointment-dates': AppointmentDate;
     appointments: Appointment;
+    services: Service;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -88,6 +89,7 @@ export interface Config {
     slots: SlotsSelect<false> | SlotsSelect<true>;
     'appointment-dates': AppointmentDatesSelect<false> | AppointmentDatesSelect<true>;
     appointments: AppointmentsSelect<false> | AppointmentsSelect<true>;
+    services: ServicesSelect<false> | ServicesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -213,6 +215,17 @@ export interface Appointment {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services".
+ */
+export interface Service {
+  id: number;
+  serviceName: string;
+  servicePrice: number;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -254,6 +267,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'appointments';
         value: number | Appointment;
+      } | null)
+    | ({
+        relationTo: 'services';
+        value: number | Service;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -367,6 +384,16 @@ export interface AppointmentsSelect<T extends boolean = true> {
   customerPhone?: T;
   slot?: T;
   'appointment-dates'?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services_select".
+ */
+export interface ServicesSelect<T extends boolean = true> {
+  serviceName?: T;
+  servicePrice?: T;
   updatedAt?: T;
   createdAt?: T;
 }

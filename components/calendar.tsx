@@ -55,7 +55,7 @@ export function CalendarCustomDays({appointmentsDates}: { appointmentsDates: App
   }
 
   return (
-    <Card className="mx-auto w-fit p-0">
+    <Card className="mx-auto w-fit p-0 mb-16">
       <CardContent className="p-0">
         <Calendar
           onDayClick={handleDayClick}
@@ -85,7 +85,7 @@ export function CalendarCustomDays({appointmentsDates}: { appointmentsDates: App
       {showSlotsContainer &&
         (<CardFooter className="bg-background">
           <Dialog>
-            <div>
+            <div className="flex gap-2 flex-wrap">
               {slots.length > 0 ? slots.map(slot => (
                   <DialogTrigger key={slot.id}
                                  render={
