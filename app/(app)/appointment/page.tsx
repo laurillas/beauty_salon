@@ -78,7 +78,7 @@ export default async function Appointment() {
                 {/*    </div>*/}
                 {/*</section>*/}
             </div>
-            <CalendarCustomDays appointmentsDates={appointmentDates}/>
+            {/*<CalendarCustomDays appointmentsDates={appointmentDates}/>*/}
         </div>
     )
 }
