@@ -181,6 +181,7 @@ export interface Slot {
   id: number;
   startTime: string;
   endTime: string;
+  timeRange?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -209,6 +210,7 @@ export interface Appointment {
   customerName: string;
   customerPhone: string;
   slot: number | Slot;
+  service: number | Service;
   'appointment-dates'?: (number | null) | AppointmentDate;
   updatedAt: string;
   createdAt: string;
@@ -361,6 +363,7 @@ export interface MediaSelect<T extends boolean = true> {
 export interface SlotsSelect<T extends boolean = true> {
   startTime?: T;
   endTime?: T;
+  timeRange?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -383,6 +386,7 @@ export interface AppointmentsSelect<T extends boolean = true> {
   customerName?: T;
   customerPhone?: T;
   slot?: T;
+  service?: T;
   'appointment-dates'?: T;
   updatedAt?: T;
   createdAt?: T;

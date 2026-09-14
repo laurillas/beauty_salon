@@ -9,7 +9,9 @@ export const Services: CollectionConfig = {
     access: {
         create: () => true
     },
-    admin: {},
+    admin: {
+        useAsTitle: 'serviceName'
+    },
     fields: [
         {
             name: 'serviceName',

@@ -4,7 +4,7 @@ import {useState} from "react"
 import dayjs from "dayjs"
 import {Calendar} from "@/components/ui/calendar"
 import {Card, CardContent, CardFooter} from "@/components/ui/card"
-import {Appointment, AppointmentDate, Slot} from "@/payload-types";
+import {Appointment, AppointmentDate, Service, Slot} from "@/payload-types";
 import {Button} from "@/components/ui/button";
 import AppointmentForm from "@/components/appointment-form";
 import {
@@ -12,7 +12,10 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-export function CalendarCustomDays({appointmentsDates}: { appointmentsDates: AppointmentDate[] }) {
+export function CalendarCustomDays({services, appointmentsDates}: {
+  services: Service[],
+  appointmentsDates: AppointmentDate[]
+}) {
   const [showSlotsContainer, setShowSlotsContainer] = useState(false);
   const [slots, setSlots] = useState<Slot[]>([]);
   const [slot, setSlot] = useState<Slot | null>(null);
@@ -97,7 +100,7 @@ export function CalendarCustomDays({appointmentsDates}: { appointmentsDates: App
                 )) :
                 (<div>No hay turnos disponibles</div>)}
             </div>
-            <AppointmentForm slot={slot} appointmentDate={appointmentDate} />
+            <AppointmentForm slot={slot} services={services} appointmentDate={appointmentDate} />
           </Dialog>
         </CardFooter>)}
     </Card>

@@ -34,6 +34,16 @@ export const Appointments: CollectionConfig = {
       }
     },
     {
+      name: 'service',
+      type: 'relationship',
+      relationTo: 'services',
+      required: true,
+      admin: {
+        allowEdit: false,
+        allowCreate: false,
+      }
+    },
+    {
       name: 'appointment-dates',
       type: 'relationship',
       relationTo: 'appointment-dates',

@@ -7,7 +7,8 @@ export const Slots: CollectionConfig = {
     plural: 'Turnos'
   },
   admin: {
-    defaultColumns: ['startTime', 'endTime']
+    defaultColumns: ['startTime', 'endTime'],
+    useAsTitle: 'timeRange'
   },
   fields: [
     {
@@ -22,6 +23,20 @@ export const Slots: CollectionConfig = {
       required: true,
       label: 'Hora fin',
     },
+    {
+      name: 'timeRange',
+      type: 'text',
+      admin: {
+        hidden: true
+      },
+      hooks: {
+        beforeChange: [
+          ({siblingData}) => {
+            return `${siblingData.startTime} - ${siblingData.endTime}`;
+          }
+        ],
+      }
+    }
   ],
   defaultSort: ['startTime']
 }

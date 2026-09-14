@@ -10,3 +10,13 @@ export async function getAppointmentDates() {
 
   return appointmentDates.docs;
 }
+
+export async function getServices() {
+  const payload = await getPayload({ config })
+
+  const services = await payload.find({
+    collection: 'services',
+  });
+
+  return services.docs;
+}

@@ -7,7 +7,8 @@ export const AppointmentDates: CollectionConfig = {
     plural: 'Fechas',
   },
   admin: {
-    defaultColumns: ['date', 'slots']
+    defaultColumns: ['date', 'slots'],
+    useAsTitle: 'date'
   },
   fields: [
     {
