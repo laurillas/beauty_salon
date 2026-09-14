@@ -32,7 +32,7 @@ export default function AppointmentForm({slot, services, appointmentDate}: {
     services: Service[],
     appointmentDate: AppointmentDate | null
 }) {
-    const numeroWhatsApp = "5354316743";
+    const numeroWhatsApp = "5353502772";
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [serviceId, setServiceId] = useState<number | null>(null);
