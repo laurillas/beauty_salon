@@ -1,4 +1,5 @@
 import {CollectionConfig} from "payload";
+import {revalidatePath, revalidateTag} from "next/cache";
 
 export const AppointmentDates: CollectionConfig = {
   slug: 'appointment-dates',
@@ -8,7 +9,10 @@ export const AppointmentDates: CollectionConfig = {
   },
   admin: {
     defaultColumns: ['date', 'slots'],
-    useAsTitle: 'date'
+    useAsTitle: 'date',
+  },
+  hooks: {
+    afterChange: [() => revalidatePath('/appointment')]
   },
   fields: [
     {
