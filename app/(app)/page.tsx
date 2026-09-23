@@ -5,6 +5,5 @@ export default function Home() {
     <main className="w-full h-full">
       <Menu/>
     </main>
-
   );
 }
