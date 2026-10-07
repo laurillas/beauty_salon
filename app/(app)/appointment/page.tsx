@@ -14,11 +14,11 @@ export default async function Appointment() {
                 <section className="mb-12">
                     <p className="mb-4">Hola,
 
-                        mi nombre es Wendy Presilien Isaac, tengo 29 años, Odontóloga de profesión y CEO de
+                        mi nombre es Wendy Presilien Isaac, tengo 30 años, Odontóloga de profesión y CEO de
                         @gwendolyn_beautystudio.
                         Soy Lash Artist con más de dos años de experiencia. Instructora de belleza certificada por
-                        @ameb_cuba , Lash Master Star @lashmaster.eu , y certificada en Lash Trends 2025 por
-                        @lashacademy_bymaria . Certificada en Técnica Clásica por Niemon Academy Internacion y Raev
+                        @ameb_cuba, Lash Master Star @lashmaster.eu, y certificada en Lash Trends 2025 por
+                        @lashacademy_bymaria. Certificada en Técnica Clásica por Niemon Academy Internacion y Raev
                         Academy. Embajadora y Asesora Autorizada de Internacional Lash Academy.
 
                     </p>
