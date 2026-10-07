@@ -12,7 +12,7 @@ export const AppointmentDates: CollectionConfig = {
     useAsTitle: 'date',
   },
   hooks: {
-    afterOperation: [() => revalidatePath('/appointment')]
+    afterChange: [() => revalidatePath('/appointment')]
   },
   fields: [
     {

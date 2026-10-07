@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import {CalendarCustomDays} from "@/components/calendar";
 import {getAppointmentDates, getServices} from "@/app/(app)/actions";
 import DatePolicy from "@/components/date-policy";
