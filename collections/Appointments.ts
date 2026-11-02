@@ -9,7 +9,10 @@ export const Appointments: CollectionConfig = {
   access: {
     create: () => true
   },
-  admin: {},
+  admin: {
+    useAsTitle: 'customerName',
+    defaultColumns: ['customerName', 'customerPhone', 'slot', 'service', 'appointment-dates']
+  },
   fields: [
     {
       name: 'customerName',

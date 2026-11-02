@@ -1,5 +1,5 @@
 import {CollectionConfig} from "payload";
-import {revalidatePath, revalidateTag} from "next/cache";
+import {revalidatePath} from "next/cache";
 
 export const AppointmentDates: CollectionConfig = {
   slug: 'appointment-dates',
@@ -42,7 +42,6 @@ export const AppointmentDates: CollectionConfig = {
       hasMany: true,
       admin: {
         allowCreate: false,
-        hidden: true
       }
     },
   ]

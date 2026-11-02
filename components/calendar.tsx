@@ -88,7 +88,7 @@ export function CalendarCustomDays({services, appointmentsDates}: {
       {showSlotsContainer &&
         (<CardFooter className="bg-background">
           <Dialog>
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-2 flex-col">
               {slots.length > 0 ? slots.map(slot => (
                   <DialogTrigger key={slot.id}
                                  render={
