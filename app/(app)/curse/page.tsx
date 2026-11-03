@@ -1,5 +1,5 @@
 import Gwendolyn from "@/components/gwendolyn";
-import {ArrowUpRight, Award, Check, Clock3, Gem, GraduationCap, MapPin, Sparkles, Stethoscope} from 'lucide-react'
+import { Check } from 'lucide-react'
 
 
 export default function Curse() {
@@ -57,7 +57,6 @@ export default function Curse() {
             <section id="cursos" className="px-6 py-8 lg:px-10">
                 <div className="mx-auto max-w-7xl">
                     <div className="grid gap-6 lg:grid-cols-3">{courses.map((course) => {
-                        const Icon = course.icon;
                         return <article key={course.number}
                                         className={`group mb-6 flex flex-col rounded-[2rem] border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-[#f0d9dc] bg-[#fff3f2]`}>
                             <p className={`mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#b76e83]`}>{course.eyebrow}</p>
@@ -71,9 +70,6 @@ export default function Curse() {
                                 <Check aria-hidden="true"
                                        className={`mt-0.5 shrink-0 ${course.tone === 'dark' ? 'text-[#e6b9a9]' : 'text-[#b76e83'}`}/>{highlight}
                             </li>)}</ul>
-                            {/*<a href="#contacto"*/}
-                            {/*   className={`mt-8 inline-flex items-center justify-between rounded-xl px-4 py-3 text-sm font-bold transition-colors ${course.tone === 'dark' ? 'bg-white text-[#4d2e3f] hover:bg-[#f8e8e3]' : 'bg-[#4d2e3f] text-white hover:bg-[#694155]'}`}>Solicitar*/}
-                            {/*    información <ArrowUpRight aria-hidden="true"/></a>*/}
                         </article>
                     })}</div>
                 </div>
