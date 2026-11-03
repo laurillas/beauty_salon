@@ -5,7 +5,7 @@ import Gwendolyn from "@/components/gwendolyn";
 
 const links = [
   { href: "/appointment", label: "Aparta tu cita", icon: CalendarDays },
-  { href: "https://iris.lab406.com/gwendolynbeautystudio", label: "Precios", icon: PriceIcon },
+  { href: "/Catálogo.pdf", label: "Precios", icon: PriceIcon },
   { href: "https://wa.me/53502772", label: "WhatsApp", icon: WhatsAppIcon },
   { href: "https://chat.whatsapp.com/DX3Hi13gwVn2atk5gjqMOm?mode=wwt", label: "Grupo de WhatsApp", icon: WhatsAppIcon },
   { href: "https://www.instagram.com/gwendolyn_beautystudio?igsh=MW11YTllaGxmanEzdg==", label: "Instagram", icon: InstagramIcon },
